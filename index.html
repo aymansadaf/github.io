@@ -1,12 +1,247 @@
-      <div class="project">
-        <h3>Network Traffic Analysis & Threat Hunting</h3>
-        <p class="small">Captured and analyzed 5,986 real network packets using Wireshark. Identified and attributed all external IPs, investigated anomalous traffic on a non-standard port, and traced it to a NordVPN browser extension via host-based forensics. Includes threat modeling and automated tshark analysis scripts.</p>
-        <div class="tags">
-          <span class="tag">Wireshark</span>
-          <span class="tag">TShark</span>
-          <span class="tag">Network Forensics</span>
-          <span class="tag">Windows CLI</span>
-          <span class="tag">Threat Hunting</span>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aymanul Haque | IT Student</title>
+  <meta name="description" content="Portfolio website for Aymanul Haque, an IT student focused on cloud, networking, and web development." />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#111a2e;
+      --text:#e7eefc;
+      --muted:#a9b7d0;
+      --brand:#5dd4ff;
+      --border:rgba(255,255,255,.10);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background:
+        radial-gradient(1200px 800px at 10% 10%, rgba(93,212,255,.18), transparent 55%),
+        radial-gradient(1000px 700px at 90% 30%, rgba(167,139,250,.16), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:980px; margin:0 auto; padding:28px 18px 64px}
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; position:sticky; top:0; z-index:10;
+      padding:14px 0;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(11,18,32,.85), rgba(11,18,32,.55));
+    }
+    .brand{display:flex; align-items:center; gap:12px}
+    .avatar{
+      width:44px; height:44px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(93,212,255,.95), rgba(167,139,250,.95));
+      box-shadow: 0 12px 30px rgba(0,0,0,.35);
+    }
+    nav{display:flex; gap:14px; flex-wrap:wrap}
+    nav a{color:var(--text); opacity:.9; font-weight:600}
+    nav a:hover{opacity:1}
+
+    .hero{padding:34px 0 16px; display:grid; grid-template-columns: 1.4fr .6fr; gap:18px}
+    @media (max-width:820px){.hero{grid-template-columns:1fr}}
+
+    .h1{font-size:42px; line-height:1.1; margin:0 0 10px}
+    .sub{color:var(--muted); margin:0 0 18px; font-size:16px}
+    .pills{display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 0}
+    .pill{border:1px solid var(--border); background:rgba(255,255,255,.04); padding:8px 10px; border-radius:999px; color:var(--muted); font-size:13px}
+
+    .grid{display:grid; gap:14px; grid-template-columns: repeat(12, 1fr); margin-top:18px}
+    .card{
+      grid-column: span 6;
+      border:1px solid var(--border);
+      background: rgba(17,26,46,.72);
+      border-radius:16px;
+      padding:16px;
+      box-shadow: 0 16px 40px rgba(0,0,0,.25);
+    }
+    @media (max-width:820px){.card{grid-column: span 12}}
+    .card h2{margin:0 0 8px; font-size:18px}
+    .card p{margin:0; color:var(--muted)}
+
+    .section{margin-top:26px}
+    .section h2{margin:0 0 10px; font-size:20px}
+
+    .projects{display:grid; grid-template-columns: repeat(12, 1fr); gap:14px}
+    .project{grid-column: span 4; padding:16px; border-radius:16px; border:1px solid var(--border); background: rgba(255,255,255,.03)}
+    @media (max-width:820px){.project{grid-column: span 12}}
+    .project h3{margin:0 0 6px; font-size:16px}
+
+    .tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
+    .tag{font-size:12px; padding:4px 8px; border:1px solid var(--border); border-radius:999px; color:var(--muted)}
+
+    .btns{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+    .btn{
+      display:inline-block; padding:10px 12px; border-radius:12px;
+      border:1px solid var(--border); background: rgba(255,255,255,.05);
+      color:var(--text); font-weight:700
+    }
+    .btn.primary{border-color: rgba(93,212,255,.55); background: rgba(93,212,255,.12)}
+
+    footer{margin-top:42px; color:var(--muted); font-size:13px}
+    .small{font-size:13px; color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar" aria-hidden="true"></div>
+        <div>
+          <div style="font-weight:800">Aymanul Haque Sadaf</div>
+          <div class="small">B.Sc. IT (FIU, Dec 2026) • Cloud • Networking • Web</div>
         </div>
-        <a href="Network_Traffic_Analysis_Report.pdf" target="_blank" class="btn">View Report</a>
       </div>
+      <nav aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1 class="h1">Building reliable IT and Cloud solutions.</h1>
+        <p class="sub">I'm glad you made it here! I’m an Information Technology student at Florida International University (Dec 2026) with hands-on experience in AWS and web development, plus coursework in networking, operating systems, HCI, and information retrieval.</p>
+        <div class="btns">
+          <a class="btn primary" href="#projects">View projects</a>
+          <a class="btn" href="#contact">Contact me</a>
+          <a class="btn" href="Resume G.pdf" target="_blank">Resume</a>
+        </div>
+        <div class="pills">
+          <span class="pill">🎓 Florida International University</span>
+          <span class="pill">☁️ AWS + Azure Fundamentals</span>
+          <span class="pill">✅ Open to internships</span>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card" style="grid-column:span 12">
+          <h2>Quick highlights</h2>
+          <p>
+            • Deployed a basic AWS architecture (EC2, S3, IAM)<br>
+            • Built responsive multi-page sites with HTML/CSS/JS<br>
+            • Created an NLP resume parser + skill-gap analyzer
+          </p>
+        </div>
+        <div class="card" style="grid-column:span 12">
+          <h2>Links</h2>
+          <p>
+            <a href="https://www.linkedin.com/in/aymanul-haque/" target="_blank" rel="noreferrer">LinkedIn</a><br>
+            <a href="https://github.com/aymansadaf" target="_blank" rel="noreferrer">GitHub</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p class="small">B.Sc. in Information Technology. Interested in cloud computing, networking fundamentals, system administration, and building clean web experiences.</p>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>Cloud Essentials (AWS)</h3>
+          <p class="small">Designed and deployed a basic cloud architecture using EC2, S3, and IAM. Focused on security basics, cost awareness, and scalability.</p>
+          <div class="tags">
+            <span class="tag">AWS</span>
+            <span class="tag">EC2</span>
+            <span class="tag">S3</span>
+            <span class="tag">IAM</span>
+          </div>
+        </div>
+        <div class="project">
+          <h3>Web Development (COP 3835)</h3>
+          <p class="small">Built an interactive multi-page website with responsive design. Used Git/GitHub for version control and collaboration.</p>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">GitHub</span>
+          </div>
+        </div>
+        <div class="project">
+          <h3>Python + NLP Resume Parser</h3>
+          <p class="small">Built an NLP tool to extract skills from resumes, match against job descriptions, and generate skill-gap analysis with actionable recommendations.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">NLP</span>
+            <span class="tag">Data parsing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="grid">
+        <div class="card">
+          <h2>Languages</h2>
+          <p>Java • Python (basic) • SQL • HTML/CSS • Bash</p>
+        </div>
+        <div class="card">
+          <h2>Tools & platforms</h2>
+          <p>AWS • Git/GitHub • Linux • VS Code • Eclipse • Figma</p>
+        </div>
+        <div class="card">
+          <h2>Concepts</h2>
+          <p>Cloud computing • Networking fundamentals • System administration • Database management</p>
+        </div>
+        <div class="card">
+          <h2>Relevant coursework</h2>
+          <p>Programming in Java • HCI • Intermediate Java • Cloud Essentials • Operating Systems • Networking • Information Storage & Retrieval • Web Design</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section">
+      <h2>Certifications</h2>
+      <div class="grid">
+        <div class="card">
+          <h2>AWS Certified Cloud Practitioner</h2>
+          <p>Amazon Web Services | FIU (Oct 2025)</p>
+        </div>
+        <div class="card">
+          <h2>Microsoft Certified: Azure Fundamentals</h2>
+          <p>Microsoft | FIU (Dec 2025)</p>
+        </div>
+        <div class="card">
+          <h2>Excel White Belt L1</h2>
+          <p>McGraw Hill | FIU (Jul 2024)</p>
+        </div>
+        <div class="card">
+          <h2>Extracurricular</h2>
+          <p>INIT FIU — Information Technology & Innovation Club (Member, Aug 2024 – Present)</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p class="small">
+        Email: <a href="mailto:aymanulhaque04@gmail.com">aymanulhaque04@gmail.com</a><br>
+        Phone: <a href="tel:+17865313276">+1 (786) 531-3276</a>
+      </p>
+    </section>
+
+    <footer>
+      <p>© <span id="y"></span> Aymanul Haque Sadaf</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
